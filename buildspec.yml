@@ -29,7 +29,7 @@ phases:
       - echo "Docker 이미지 푸시"
       - docker push ${IMAGE_URI}
       - echo "imagedefinitions.json 생성"
-      - printf '[{"name":"selee-task-service","imageUri":"%s"}]' "${IMAGE_URI}" > imagedefinitions.json
+      - printf '[{"name":"selee-ecr","imageUri":"%s"}]' "${IMAGE_URI}" > imagedefinitions.json
 
 artifacts:
   files:
