@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     REPOSITORY_URI: 077672914621.dkr.ecr.ap-northeast-2.amazonaws.com
-    IMAGE_NAME: selee
+    IMAGE_NAME: selee-ecr
     IMAGE_TAG: latest
     IMAGE_URI: 077672914621.dkr.ecr.ap-northeast-2.amazonaws.com/selee:latest
 
