@@ -15,27 +15,26 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;  // 고유 식별자 (PK)
+    private Long id;
 
     @Column(nullable = false, unique = true)
-    private String businessNumber;      // 사업자 등록번호
+    private String businessNumber;
 
     @Column(nullable = false)
-    private String companyName;         // 회사명
+    private String companyName;
 
     @Column(nullable = false)
-    private String representativeName;  // 대표자명
+    private String representativeName;
 
     @Column(nullable = false)
-    private String contactEmail;        // 연락 이메일
+    private String contactEmail;
 
     @Column(nullable = false)
-    private String contactPhone;        // 연락 전화번호
+    private String contactPhone;
 
     @Column(nullable = false)
-    private String address;             // 사업장 주소
+    private String address;
 
     @Column(nullable = false)
-    private LocalDate registeredAt;     // 등록일자
-
+    private LocalDate registeredAt;
 }
