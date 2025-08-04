@@ -4,10 +4,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import java.time.LocalDate;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,23 +17,19 @@ public class User {
     private Long id;
 
     @Column(nullable = false, unique = true)
-    private String businessNumber;
+    private String email;
 
     @Column(nullable = false)
-    private String companyName;
+    private String name;
 
-    @Column(nullable = false)
-    private String representativeName;
+    @Column
+    private String phone;
 
-    @Column(nullable = false)
-    private String contactEmail;
+    @Column(name = "created_at")
+    private java.time.LocalDateTime createdAt;
 
-    @Column(nullable = false)
-    private String contactPhone;
-
-    @Column(nullable = false)
-    private String address;
-
-    @Column(nullable = false)
-    private LocalDate registeredAt;
+    @PrePersist
+    protected void onCreate() {
+        createdAt = java.time.LocalDateTime.now();
+    }
 }
